@@ -1,13 +1,14 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import './Header.css';
+import logo from '../../../public/images/Logo.svg';
 
 const Header = () => {
     return (
         <nav>
 
             <div className="logo">
-                <h6>e-shop</h6>
+                <img src={logo}></img>
             </div>
             <div className="header">
                 <a href="/home">home</a>
