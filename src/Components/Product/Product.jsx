@@ -1,9 +1,13 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
+import './Product.css'
 
-const Product = () => {
+const Product = (props) => {
+
+    const {img, name, price, seller, ratings} = props.product;
+
     return (
-        <div>
+        <div className='product'>
             <img src={img}></img>
             <h6>{name}</h6>
             <p>Price: ${price}</p>

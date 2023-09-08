@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from 'react';
 import './Shop.css'
+import Product from '../Product/Product';
 
 const Shop = () => {
 
@@ -14,8 +15,13 @@ const Shop = () => {
 
     return (
         <div className='shop-container'>
-            <div className="products-container">
-                <h1>products: {products.length}</h1>
+            <div className="product-container">
+                {
+                    products.map( product => <Product 
+                        key={product.id}
+                        product={product} 
+                    ></Product>)
+                }
             </div>
             <div className="cart-container">
                 <h1>order summary</h1>
